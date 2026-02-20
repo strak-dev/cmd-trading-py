@@ -5,15 +5,13 @@ Tests for evaluator, sequence, and engine.
 Run with: pytest tests/test_core.py -v
 """
 
-import pytest
 from datetime import datetime, timezone, timedelta
-from unittest.mock import patch
 
 from cmd_slack.format.schema import (
-    SetupConfig, Step, Condition, ConditionType, Direction
+    SetupConfig, Step, Condition, ConditionType
 )
 from cmd_slack.core.evaluator import evaluate, update_crossed_at
-from cmd_slack.core.sequence import SequenceState, from_config
+from cmd_slack.core.sequence import from_config
 from cmd_slack.core.engine import Engine
 
 

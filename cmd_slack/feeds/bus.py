@@ -21,7 +21,6 @@ Usage:
     await bus.publish(tick)
 """
 
-import asyncio
 import logging
 from dataclasses import dataclass
 from datetime import datetime, timezone

@@ -10,13 +10,12 @@ Swap in FinnhubFeed when you're ready for live data.
 
 import asyncio
 import logging
-import os
 from dotenv import load_dotenv
 
 from cmd_slack.core.engine import Engine
 from cmd_slack.feeds.store import SymbolStore
 from cmd_slack.feeds.bus import Bus, EventType, make_print_handler
-from cmd_slack.feeds.finnhub import MockFeed, FinnhubFeed
+from cmd_slack.feeds.finnhub import MockFeed
 from cmd_slack.format.parser import load_all_setups
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")

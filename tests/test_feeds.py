@@ -8,11 +8,11 @@ Run with: pytest tests/test_feeds.py -v
 import asyncio
 import json
 import pytest
-from datetime import datetime, timezone, timedelta
-from unittest.mock import AsyncMock, MagicMock, patch, call
+from datetime import datetime, timezone
+from unittest.mock import AsyncMock
 
 from cmd_slack.feeds.store import Tick, TickHistory, SymbolStore
-from cmd_slack.feeds.bus import Bus, Event, EventType, make_print_handler, log_signals
+from cmd_slack.feeds.bus import Bus, Event, EventType
 from cmd_slack.feeds.finnhub import FinnhubFeed, MockFeed, _normalize_trade
 from cmd_slack.core.engine import Engine, TickResult
 from cmd_slack.core.sequence import SequenceState

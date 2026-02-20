@@ -8,3 +8,8 @@ dependencies = [
     "pydantic>=2.12.5",
     "pyyaml>=6.0.3",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.2",
+]

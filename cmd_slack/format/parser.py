@@ -1,5 +1,4 @@
 import yaml
-from pathlib import pathlib
 from cmd_slack.format.schema import SetupConfig
 
 def load_setup(path: str | Path) -> SetupConfig:

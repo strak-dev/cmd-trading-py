@@ -10,7 +10,7 @@ Mirrors Elixir's CmdSlack.Sequence module — check_price/2 is the hot path.
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Optional
-from cmd_slack.format.schema import SetupConfig, Step, Condition
+from cmd_slack.format.schema import SetupConfig, Step
 from cmd_slack.core.evaluator import evaluate, update_crossed_at
 
 
