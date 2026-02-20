@@ -1,0 +1,32 @@
+name: "Test Day's Plan"
+date: "2026-02-19"
+description: "You are in a Mode 2 market (rangebound chop) within a large megaphone structure. The edges are roughly 6829-32 support (macro bull flag back-test) and 7017 resistance (megaphone top) Inside that, you have a critical battleground at 6886-89."
+
+setups:
+  # BULL PLAN (Monday)
+
+  - id: "bull_primary_defense_fbd_6815"
+    title: "Primary Defense Failed Breakdown (6815)"
+    steps:
+      - { condition: price_below, target: 6815 }
+      - { condition: price_above, target: 6815, hold_time: 120 }
+    targets:
+      - 6838
+
+  - id: "bull_friday_low_fbd_6805"
+    title: "Friday Low Failed Breakdown (6805)"
+    steps:
+      - { condition: price_below, target: 6815 }
+      - { condition: price_below, target: 6805 }
+      - { condition: price_above, target: 6805, hold_time: 120 }
+    targets:
+      - 6815
+      - 6838
+
+  - id: "bull_strength_join_6838"
+    title: "Strength Join — 6838 Reclaim"
+    steps:
+      - { condition: price_above, target: 6838, hold_time: 120 }
+    targets:
+      - 6853
+      - 6889

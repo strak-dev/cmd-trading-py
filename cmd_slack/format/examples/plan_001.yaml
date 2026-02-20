@@ -1,0 +1,43 @@
+name: "Test Day's Plan"
+date: "2026-02-19"
+description: "This is a 'megaphone' expanding range. The edges are 6800 support and 6939 resistance. Inside that, you have a tighter box from 6815/6838 to 6889/6910."
+
+setups:
+  # BULL PLAN
+
+  - id: "bull_primary_defense_6829"
+    title: "Primary Defense Recovery (6829-32)"
+    steps:
+      - { condition: price_above, target: 6829 }
+      - { condition: price_above, target: 6832, hold_time: 120 }
+    targets:
+      - 6854
+      - 6878
+
+  - id: "bull_tuesday_low_fbd_6818"
+    title: "Tuesday Low Failed Breakdown (6818)"
+    steps:
+      - { condition: price_below, target: 6818 }
+      - { condition: price_above, target: 6818, hold_time: 120 }
+    targets:
+      - 6829
+      - 6832
+
+  - id: "bull_knife_catch_6838"
+    title: "Knife Catch Defense (6838/6842)"
+    steps:
+      - { condition: price_below, target: 6838 }
+      - { condition: price_above, target: 6842, hold_time: 120 }
+    targets:
+      - 6854
+
+  # BEAR PLAN
+
+  - id: "bear_breakdown_6829"
+    title: "Breakdown Below 6829-32"
+    steps:
+      - { condition: price_below, target: 6829 }
+      - { condition: price_above, target: 6825 }   # failed bounce top
+      - { condition: price_below, target: 6825 }   # trigger: short below failed bounce low
+    targets:
+      - 6806
